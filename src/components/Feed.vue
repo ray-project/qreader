@@ -25,6 +25,7 @@
 </template>
 
 <script>
+  import { axios } from '../utils';
   import { common } from '../utils';
 
   export default {
@@ -40,6 +41,7 @@
       faveIt(item) {
           item.favedAt = new Date();
           this.$store.commit('TOGGLE_FAV', item);
+          axios.post('api', {"method_name": "like_item", "method_args": [item.link, this.isFaved(item.link)]})
       },
       faveTime(time) {
           return common.timeAgo(time);
