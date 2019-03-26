@@ -2,7 +2,7 @@
   <div class="feed-list">
       <el-row :gutter="14">
         <el-col v-for="(feed, index) in items" :key="index" :sm="12" :md="12" :lg="8">
-          <div class="feed-item" :class="{ 'query-match': query == feed.title }">
+          <div class="feed-item" :class="{ 'query-match': query == feed.title }" :style="{ 'background-color': feed.color }">
               <div class="feed-thumb" v-if="feed.img">
                   <img :src="feed.img" alt="">
               </div>
