@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A feed reader app with vue.js and vuex",
   "author": "Mohd Saqueib Ansari <saquibweb@gmail.com>",
+  "homepage": "./",
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
