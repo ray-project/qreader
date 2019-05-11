@@ -41,7 +41,7 @@
       faveIt(item) {
           item.favedAt = new Date();
           this.$store.commit('TOGGLE_FAV', item);
-          axios.post('api', {"method_name": "like_item", "method_args": [item.link, item.title, this.isFaved(item.link)]})
+          axios.post('/?method_name=like_item&method_args=' + item.link + '&method_args=' + item.title + '&method_args=' + this.isFaved(item.link))
       },
       faveTime(time) {
           return common.timeAgo(time);
